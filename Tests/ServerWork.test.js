@@ -1,3 +1,4 @@
 const assert = require("assert");
 
-it("int", assert(1, 1));
+it("int", assert.strictEqual(1, 1));
+it("float", assert.strictEqual(1.5 == 1.5))
