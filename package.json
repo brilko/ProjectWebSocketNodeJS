@@ -1,0 +1,13 @@
+{
+  "name": "testapp",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "mocha *.test.js"
+  },
+  "devDependencies": {
+    "mocha": "^8.2.0"
+  },
+  "dependencies": {
+    "ws": "^7.3.1"
+  }
+}
