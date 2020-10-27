@@ -9,3 +9,8 @@
  * DataBase | Request()
  * ServerWebProtocol | Send(string)
  */
+
+ /* Фильтр значений датчика(во внешней функции, чтобы тестировать) */
+module.exports.processValues = function(rawNumArray){
+    return [];
+}

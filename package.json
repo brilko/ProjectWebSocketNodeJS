@@ -2,7 +2,7 @@
   "name": "testapp",
   "version": "1.0.0",
   "scripts": {
-    "test": "mocha *.test.js"
+    "test": "mocha ./Application/Tests/ModularTests/*.test.js"
   },
   "devDependencies": {
     "mocha": "^8.2.0"
