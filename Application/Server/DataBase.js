@@ -9,4 +9,6 @@
  * Не использует другие модули приложения.
  */
 
- module.exports.Request = function() { }
+ module.exports.Request = function() {
+     return [];
+}
