@@ -6,3 +6,12 @@
  * Использует
  * GraphicUserInterface | Display(arrayValues)
  */
+
+const socket = io();
+var displayer = require('./GraphicUserUnterface')
+
+socket.on('newValuesPortion', (values) => {
+    displayer.display(values);
+})
+
+ 
