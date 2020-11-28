@@ -4,11 +4,11 @@
  * processedValues = porcessValues(values); // В массив processedValues записывается 200 значений.
  */
 
-const serverWork = require("../../Server/ServerWork.js");
+const serverWork = require("../../WebSocket/app.js");
 const assert = require("assert");
 
-const lengthOfOneBlock = 1000;
-const countBlocks = 200;
+const lengthOfOneBlock = 200;
+const countBlocks = 500;
 const regularNumbersInterval = [0, 10];
 const expectedNumbersInterval = [20, 30];
 

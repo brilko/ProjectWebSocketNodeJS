@@ -5,7 +5,8 @@
     "test": "mocha ./Application/Tests/ModularTests/*.test.js"
   },
   "devDependencies": {
-    "mocha": "^8.2.0"
+    "mocha": "^8.2.1",
+    "mongodb": "^3.6.3"
   },
   "dependencies": {
     "ws": "^7.3.1"
