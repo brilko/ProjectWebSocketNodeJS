@@ -2,9 +2,7 @@ const { StringDecoder } = require("string_decoder");
 
 const WebSocketServer = new require('ws'),
 	  MongoClient = require('mongodb').MongoClient,
-	  assert = require('assert'),
-	  fs = require('fs'),
-	  http = require("http");
+	  assert = require('assert');
 
 // ******************WebSocketServer********************
 // клиент
@@ -84,30 +82,30 @@ function doSomething() {
 		  collection = db.collection(collectionName),
 		  cursor = collection.find();
 
-	http.createServer(function(request, response){
+	// http.createServer(function(request, response){
 
-		console.log(`Запрошенный адрес: ${request.url}`);
-		// получаем путь после слеша
-		let filePath = request.url.substr(1);
+	// 	console.log(`Запрошенный адрес: ${request.url}`);
+	// 	// получаем путь после слеша
+	// 	let filePath = request.url.substr(1);
 
-		if (filePath == '') {
-			filePath = 'index.html';
-		}
+	// 	if (filePath == '') {
+	// 		filePath = 'index.html';
+	// 	}
 
-		// смотрим, есть ли такой файл
-		fs.access(filePath, fs.constants.R_OK, err => {
-			// если произошла ошибка - отправляем статусный код 404
-			if(err){
-				response.statusCode = 404;
-				response.end("Resourse not found!");
-			}
-			else{
-				fs.createReadStream(filePath).pipe(response);
-			}
-		});
-	}).listen(3000, function(){
-		console.log("Server started at 3000");
-	});
+	// 	// смотрим, есть ли такой файл
+	// 	fs.access(filePath, fs.constants.R_OK, err => {
+	// 		// если произошла ошибка - отправляем статусный код 404
+	// 		if(err){
+	// 			response.statusCode = 404;
+	// 			response.end("Resourse not found!");
+	// 		}
+	// 		else{
+	// 			fs.createReadStream(filePath).pipe(response);
+	// 		}
+	// 	});
+	// }).listen(3000, function(){
+	// 	console.log("Server started at 3000");
+	// });
 
 	webSocketServer.on('connection', function(ws) {
 		clients[++clientId] = new Client(ws);

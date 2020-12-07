@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="http://localhost:3000/style.css">
 </head>
 <body>
+    <select>
+        <option>WebSocket</option>
+        <option>Socket.Io</option>
+    </select>
     <div class="app">
         <line-chart :chart-data="datacollection" :style="myStyles"></line-chart>
     </div>
@@ -15,7 +19,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
     <script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
     <script src="http://localhost:3000/chart.js"></script>
-    <script src="http://localhost:3000/socket.io.js"></script>
     <script src="http://localhost:3000/script.js"></script>
+    <script src="http://localhost:3000/socket.io.js"></script>
 </body>
 </html>
